@@ -1,14 +1,20 @@
-import { FC } from 'react'
+import { FC, useState } from 'react'
 import { Typography } from '@mui/material'
 import { Colors } from '@/constants/styles'
 import { MainPageWrapper } from './StartPage.styles'
-import { ButtonContent } from '@/components/ButtonContent'
+import { ButtonContent } from '@/components/Contents/ButtonContent'
 
-export const StartPage: FC = () => (
-  <MainPageWrapper>
-    <Typography variant="h3" fontWeight={800} color={[Colors.RichBlack]}>
-      Summer Memory
-    </Typography>
-    <ButtonContent></ButtonContent>
-  </MainPageWrapper>
-)
+interface Props {
+  onStartGame: () => void
+}
+
+export const StartPage: FC<Props> = (props) => {
+  return (
+    <MainPageWrapper>
+      <Typography variant="h3" fontWeight={800} color={[Colors.RichBlack]}>
+        Summer Memory
+      </Typography>
+      <ButtonContent onButtonClick={props.onStartGame}></ButtonContent>
+    </MainPageWrapper>
+  )
+}

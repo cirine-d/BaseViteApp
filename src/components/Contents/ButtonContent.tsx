@@ -2,8 +2,12 @@ import { FC } from 'react'
 import { Typography } from '@mui/material'
 import { Colors } from '@/constants/styles'
 
-export const ButtonContent: FC = () => (
+interface Props {
+  onButtonClick: () => void
+}
+
+export const ButtonContent: FC<Props> = (props) => (
   <Typography variant="subtitle1" fontWeight={600} color={Colors.Rufous}>
-    <button>Play</button>
+    <button onClick={props.onButtonClick}>Play</button>
   </Typography>
 )
