@@ -1,8 +1,12 @@
 export interface Card {
-  id: number
-  //siblingId: number
-  imgFile: string
-  name: string
+  id: string
+  siblingId: string
+  emoji: string
+}
+
+export interface Emojis {
+  label: string
+  emoji: string
 }
 
 export type GameState = 'StartPage' | 'GamePage'

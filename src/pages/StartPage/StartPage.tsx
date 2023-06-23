@@ -13,7 +13,7 @@ export const StartPage: FC<Props> = (props) => {
   return (
     <MainPageWrapper>
       <Sun />
-    <Title />
+      <Title />
       <ButtonContent onButtonClick={props.onStartGame}></ButtonContent>
     </MainPageWrapper>
   )
