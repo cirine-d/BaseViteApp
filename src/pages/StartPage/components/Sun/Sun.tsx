@@ -15,7 +15,7 @@ import {
   RayBox,
 } from './Sun.styled'
 
-export const Sun = (props: { gameState: GameState }) => {
+export const Sun = (props: { gameState?: GameState }) => {
   const sunContent = (
     <RayBox>
       <Ray1 />

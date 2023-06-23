@@ -10,6 +10,7 @@ export const FlippedCard = styled.div`
 `
 
 export const UnFlippedCard = styled.div`
-  background-color: blue;
+  background-color: #fffdcb;
   color: transparent;
+  margin: 5px;
 `
