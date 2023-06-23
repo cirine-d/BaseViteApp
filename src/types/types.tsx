@@ -9,4 +9,9 @@ export interface Emojis {
   emoji: string
 }
 
+export interface FlippedCards {
+  A: string | undefined
+  B: string | undefined
+}
+
 export type GameState = 'StartPage' | 'GamePage'

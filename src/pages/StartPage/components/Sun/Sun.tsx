@@ -1,5 +1,7 @@
+import { GameState } from '@/types/types'
 import {
-  Base,
+  BaseGame,
+  BaseStart,
   Ray1,
   Ray10,
   Ray2,
@@ -13,8 +15,8 @@ import {
   RayBox,
 } from './Sun.styled'
 
-export const Sun = () => (
-  <Base>
+export const Sun = (props: { gameState: GameState }) => {
+  const sunContent = (
     <RayBox>
       <Ray1 />
       <Ray2 />
@@ -27,5 +29,11 @@ export const Sun = () => (
       <Ray9 />
       <Ray10 />
     </RayBox>
-  </Base>
-)
+  )
+
+  return props.gameState === 'StartPage' ? (
+    <BaseStart>{sunContent}</BaseStart>
+  ) : (
+    <BaseGame>{sunContent}</BaseGame>
+  )
+}

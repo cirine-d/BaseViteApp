@@ -15,7 +15,7 @@ export const App: FC = () => {
     <ThemeProvider theme={{}}>
       <CssBaseline />
       {gameState === 'StartPage' ? (
-        <StartPage onStartGame={clickHandler} />
+        <StartPage gameState={gameState} onStartGame={clickHandler} />
       ) : (
         <GamePage />
       )}

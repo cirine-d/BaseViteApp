@@ -1,47 +1,9 @@
-import { GridContent } from '@/pages/GamePage/components/GridContent'
+import { Grid } from '@/pages/GamePage/components/Grid/Grid'
 import { FC, useEffect, useState } from 'react'
 import { MainPageWrapper } from '../StartPage/StartPage.styles'
-import { Card, Emojis } from '@/types/types'
-
-const emojis: Emojis[] = [
-  {
-    label: 'Surfer',
-    emoji: '🏄',
-  },
-  {
-    label: 'Shell',
-    emoji: '🐚',
-  },
-  {
-    label: 'Drink',
-    emoji: '🍹',
-  },
-  {
-    label: 'Island',
-    emoji: '🏝️',
-  },
-  {
-    label: 'Sunglasses',
-    emoji: '🕶️',
-  },
-  {
-    label: 'Bikini',
-    emoji: '👙',
-  },
-  {
-    label: 'Sunflower',
-    emoji: '🌻',
-  },
-  {
-    label: 'Swimmer',
-    emoji: '🏊',
-  },
-]
-
-interface FlippedCards {
-  A: string | undefined
-  B: string | undefined
-}
+import { Card, Emojis, FlippedCards } from '@/types/types'
+import { emojis } from './data/Emojis'
+import { Sun } from '../StartPage/components/Sun/Sun'
 
 export const GamePage: FC = () => {
   const [flipped, setFlipped] = useState<FlippedCards>({
@@ -76,7 +38,8 @@ export const GamePage: FC = () => {
 
   return (
     <MainPageWrapper>
-      <GridContent cards={cards}></GridContent>
+      <Sun />
+      <Grid cards={cards}></Grid>
     </MainPageWrapper>
   )
 }

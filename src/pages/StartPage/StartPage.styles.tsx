@@ -4,6 +4,10 @@ import backgroundImage from './images/beach-background.png'
 import title from './images/Summer-memory-title.png'
 
 export const MainPageWrapper = styled.main`
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 10%;
   height: 100vh;
   width: 100vw;
   overflow: hidden;

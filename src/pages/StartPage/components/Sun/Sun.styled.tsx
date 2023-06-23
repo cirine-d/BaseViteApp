@@ -6,10 +6,22 @@ const rotate = keyframes`
 100% { -webkit-transform: rotate(360deg); transform: rotate(360deg);}
 `
 
-export const Base = styled.div`
+export const BaseStart = styled.div`
   position: absolute;
   top: 15%;
   left: 25%;
+  margin: auto;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: #fffc00;
+  opacity: 0.9;
+  box-shadow: 0px 0px 40px 15px #fffc00;
+`
+export const BaseGame = styled.div`
+  position: absolute;
+  top: 5%;
+  left: 15%;
   margin: auto;
   width: 70px;
   height: 70px;
