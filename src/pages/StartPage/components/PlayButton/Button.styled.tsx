@@ -8,8 +8,10 @@ export const StyledButton = styled.button`
   box-shadow: 5px 10px #888888;
   z-index: 2;
   cursor: pointer;
+  transition: 200ms;
 
   &:hover {
     transform: scale(1.1);
+    transition: 200ms;
   }
 `
